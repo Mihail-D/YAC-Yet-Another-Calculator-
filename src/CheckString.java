@@ -5,14 +5,34 @@ public class CheckString {
         }
     }
 
-    public static void checkAllArabic(String[] arr) {
+    public static boolean checkAllArabic(String[] arr) {
         String[] sample = {arr[0], arr[2]};
-        for (int i = 0; i < sample.length; i++) {
-            boolean isNumeric = sample[i].chars().allMatch(Character::isDigit);
+        boolean isNumeric = true;
+        for (String s : sample) {
+            isNumeric = s.chars().allMatch(Character::isDigit);
             if (!isNumeric) {
                 throw new NullPointerException("В строке допустимы только арабские числа");
             }
         }
-
+        return isNumeric;
     }
+
+    public static boolean checkAllRoman(String[] arr) throws Exception {
+        String[] roman = {"I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"};
+        String[] sample = {arr[0], arr[2]};
+        boolean isRoman = false;
+        for (int i = 0; i < sample.length; i++) {
+            for (int j = 0; j < roman.length; j++) {
+                if(sample[i].equals(roman[j])) {
+                    isRoman = true;
+                }
+                else {
+                    isRoman = false;
+                    throw new Exception("В строке допустимы только римские числа");
+                }
+            }
+        }
+        return isRoman;
+    }
+
 }

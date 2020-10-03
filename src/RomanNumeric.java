@@ -1,12 +1,11 @@
 import javafx.beans.binding.MapExpression;
-
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-public class RomanNumericSet {
+public class RomanNumeric {
     private static MapExpression<String, Integer> romanNumericSet;
-    Map<String, Integer> romanNumericSet = new HashMap<String, Integer>() {{
+    Map<String, Integer> romanNumeric = new HashMap<String, Integer>() {{
         put("I", 1);
         put("II", 2);
         put("III", 3);
