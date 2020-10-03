@@ -2,10 +2,10 @@ import javafx.beans.binding.MapExpression;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 
 public class RomanNumeric {
-    private static MapExpression<String, Integer> romanNumericSet;
-    Map<String, Integer> romanNumeric = new HashMap<String, Integer>() {{
+    static Map<String, Integer> romanNumeric = new HashMap<String, Integer>() {{
         put("I", 1);
         put("II", 2);
         put("III", 3);
@@ -20,12 +20,11 @@ public class RomanNumeric {
 
     public static int getArabicFromRoman(String s) {
         int arabicInt = 0;
-        Iterator<String> itr = romanNumericSet.keySet().iterator();
-        while (itr.hasNext()) {
-            String key = itr.next();
-            int value = romanNumericSet.get(key);
+        Set<String> set = romanNumeric.keySet();
+        for (String key : set) {
+            int value = romanNumeric.get(key);
 
-            if(key.equals(s)) {
+            if (key.equals(s)) {
                 arabicInt = value;
             }
         }

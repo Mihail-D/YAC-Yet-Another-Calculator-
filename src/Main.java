@@ -16,6 +16,8 @@ public class Main {
         }
           else if (arr[0].matches("^M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$") ) {
             CheckString.checkAllRoman(arr);
+            int result = RomanMathBloc.getResult(arr);
+            System.out.println(result);
         }
     }
 }
