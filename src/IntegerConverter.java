@@ -7,10 +7,6 @@ public class IntegerConverter {
 
     static {
         NavigableMap<Integer, String> initMap = new TreeMap<>();
-        initMap.put(1000, "M");
-        initMap.put(900, "CM");
-        initMap.put(500, "D");
-        initMap.put(400, "CD");
         initMap.put(100, "C");
         initMap.put(90, "XC");
         initMap.put(50, "L");
@@ -24,8 +20,9 @@ public class IntegerConverter {
     }
 
     public static String intToRoman(int number) {
-        if (number >= 4000 || number <= 0) {
-            return null;
+        if (number > 100 || number <= 0) {
+            System.out.println("Превышена величина значений");
+            return "";
         }
         StringBuilder result = new StringBuilder();
         for (Integer key : units.descendingKeySet()) {
