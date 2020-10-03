@@ -18,5 +18,8 @@ public class Main {
             int result = RomanMathBloc.getResult(arr);
             System.out.println(IntegerConverter.intToRoman(result));
         }
+        else {
+            throw new Exception("Строка не соответсвуте заданному формату");
+        }
     }
 }
