@@ -18,19 +18,19 @@ public class CheckString {
     }
 
     public static boolean checkAllRoman(String[] arr) throws Exception {
-        String[] roman = {"I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"};
         String[] sample = {arr[0], arr[2]};
         boolean isRoman = false;
+
         for (int i = 0; i < sample.length; i++) {
-            for (int j = 0; j < roman.length; j++) {
-                if(sample[i].equals(roman[j])) {
+
+                if(sample[i].matches("^M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$")) {
                     isRoman = true;
+                    System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!");
                 }
                 else {
-                    isRoman = false;
+                    //isRoman = false;
                     throw new Exception("В строке допустимы только римские числа");
                 }
-            }
         }
         return isRoman;
     }

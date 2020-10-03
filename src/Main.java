@@ -8,20 +8,14 @@ public class Main {
         String s = reader.readLine();
         String[] arr = StringConverter.getSplitString(s);
         CheckString.checkStringLength(arr);
-        //return java.util.regex.Pattern.matches("\\d+", s);
+
         if(java.util.regex.Pattern.matches("\\d+", arr[0])) {
             CheckString.checkAllArabic(arr);
             double result = ArabicMathBloc.getResult(arr);
             System.out.println(result);
         }
-          else if (CheckString.checkAllRoman(arr)) {
-            System.out.println("ROMAN!!!!!!!!!");
+          else if (arr[0].matches("^M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$") ) {
+            CheckString.checkAllRoman(arr);
         }
-
-
-
-
-
-
     }
 }
