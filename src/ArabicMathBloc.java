@@ -12,7 +12,8 @@ public class ArabicMathBloc {
             result = Integer.parseInt(arr[0]) * Integer.parseInt(arr[2]);
         }
         else if (operator.equals("/")) {
-            result = (double) Integer.parseInt(arr[0]) / Integer.parseInt(arr[2]);
+            double x = Double.parseDouble(arr[0]) / Double.parseDouble(arr[2]);
+            result = Math.round(x * 100.0) / 100.0;
         }
 
     return result;

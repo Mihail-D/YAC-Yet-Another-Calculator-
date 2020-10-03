@@ -16,7 +16,7 @@ public class Main {
         else if (arr[0].matches("^(X{0,3})(IX|IV|V?I{0,3})$")) {
             CheckString.checkAllRoman(arr);
             int result = RomanMathBloc.getResult(arr);
-            System.out.println(result);
+            System.out.println(IntegerConverter.intToRoman(result));
         }
     }
 }

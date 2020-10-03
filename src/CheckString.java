@@ -1,6 +1,6 @@
 public class CheckString {
     public static void checkStringLength(String[] arr) {
-        if (arr.length <= 0) {
+        if (arr.length <= 2) {
             throw new ArrayIndexOutOfBoundsException("Введите строку в формате " + "\"число-оператор-число\"");
         }
     }
