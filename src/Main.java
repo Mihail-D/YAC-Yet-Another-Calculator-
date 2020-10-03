@@ -1,5 +1,4 @@
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Main {
@@ -9,12 +8,12 @@ public class Main {
         String[] arr = StringConverter.getSplitString(s);
         CheckString.checkStringLength(arr);
 
-        if(java.util.regex.Pattern.matches("\\d+", arr[0])) {
+        if (java.util.regex.Pattern.matches("\\d+", arr[0])) {
             CheckString.checkAllArabic(arr);
             double result = ArabicMathBloc.getResult(arr);
             System.out.println(result);
         }
-          else if (arr[0].matches("^M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$") ) {
+        else if (arr[0].matches("^M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$")) {
             CheckString.checkAllRoman(arr);
             int result = RomanMathBloc.getResult(arr);
             System.out.println(result);

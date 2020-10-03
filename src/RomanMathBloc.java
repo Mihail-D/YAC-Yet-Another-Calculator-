@@ -3,17 +3,19 @@ public class RomanMathBloc {
         String operator = arr[1];
         int result = 0;
 
-        if (operator.equals("+")) {
-            result = RomanNumeric.getArabicFromRoman(arr[0]) + RomanNumeric.getArabicFromRoman(arr[2]);
-        }
-        else if (operator.equals("-")) {
-            result = RomanNumeric.getArabicFromRoman(arr[0]) - RomanNumeric.getArabicFromRoman(arr[2]);
-        }
-        else if (operator.equals("*")) {
-            result = RomanNumeric.getArabicFromRoman(arr[0]) * RomanNumeric.getArabicFromRoman(arr[2]);
-        }
-        else if (operator.equals("/")) {
-            result = RomanNumeric.getArabicFromRoman(arr[0]) / RomanNumeric.getArabicFromRoman(arr[2]);
+        switch (operator) {
+            case "+":
+                result = RomanNumeric.getArabicFromRoman(arr[0]) + RomanNumeric.getArabicFromRoman(arr[2]);
+                break;
+            case "-":
+                result = RomanNumeric.getArabicFromRoman(arr[0]) - RomanNumeric.getArabicFromRoman(arr[2]);
+                break;
+            case "*":
+                result = RomanNumeric.getArabicFromRoman(arr[0]) * RomanNumeric.getArabicFromRoman(arr[2]);
+                break;
+            case "/":
+                result = RomanNumeric.getArabicFromRoman(arr[0]) / RomanNumeric.getArabicFromRoman(arr[2]);
+                break;
         }
 
         return Math.round(result);
