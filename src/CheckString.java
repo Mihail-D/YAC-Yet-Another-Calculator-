@@ -12,7 +12,6 @@ public class CheckString {
                 throw new ArrayIndexOutOfBoundsException("Превышен диапазон значений");
             }
         }
-
     }
 
     public static boolean checkAllArabic(String[] arr) {
@@ -39,6 +38,7 @@ public class CheckString {
                 throw new Exception("В строке допустимы только римские числа");
             }
         }
+
         return isRoman;
     }
 

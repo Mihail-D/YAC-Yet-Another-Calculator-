@@ -31,6 +31,7 @@ public class IntegerConverter {
                 result.append(units.get(key));
             }
         }
+
         return result.toString();
     }
 }
