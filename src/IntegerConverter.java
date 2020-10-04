@@ -21,7 +21,7 @@ public class IntegerConverter {
 
     public static String intToRoman(int number) {
         if (number > 100 || number <= 0) {
-            System.out.println("Превышена величина значений");
+            System.out.println("Превышен диапазон значений");
             return "";
         }
         StringBuilder result = new StringBuilder();

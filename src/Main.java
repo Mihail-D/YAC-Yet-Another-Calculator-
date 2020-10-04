@@ -9,6 +9,7 @@ public class Main {
         CheckString.checkStringLength(arr);
 
         if (java.util.regex.Pattern.matches("\\d+", arr[0])) {
+
             CheckString.checkAllArabic(arr);
             double result = ArabicMathBloc.getResult(arr);
             System.out.println(result);
