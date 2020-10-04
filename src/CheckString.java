@@ -1,8 +1,18 @@
 public class CheckString {
     public static void checkStringLength(String[] arr) {
-        if (arr.length <= 4) {
+        if (arr.length <= 2) {
             throw new ArrayIndexOutOfBoundsException("Введите строку в формате " + "\"число оператор число\"");
         }
+    }
+
+    public static void checkRangeArabic(String[] arr) {
+        String[] sample = {arr[0], arr[2]};
+        for (String s : sample) {
+            if (Integer.parseInt(s) > 10) {
+                throw new ArrayIndexOutOfBoundsException("Превышен диапазон значений");
+            }
+        }
+
     }
 
     public static boolean checkAllArabic(String[] arr) {
